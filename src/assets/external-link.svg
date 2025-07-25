@@ -1,0 +1,16 @@
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        path {
+            fill: hsl(0deg 0% 20%);
+        }
+
+        /* @media (prefers-color-scheme: dark) {
+            path {
+                fill: hsl(0deg 0% 90%);
+            }
+        } */
+    </style>
+    <path
+        d="M2.1 1.4a.7.7 0 0 0-.7.7v6.3a.7.7 0 0 0 .7.7h6.3a.7.7 0 0 0 .7-.7V5.95a.35.35 0 0 0-.7 0V8.4H2.1V2.1h2.45a.35.35 0 0 0 0-.7H2.1Zm6.898.103a.35.35 0 0 1 .102.245V3.85a.35.35 0 0 1-.7 0V2.595L4.797 6.197a.35.35 0 1 1-.494-.494L7.905 2.1H6.65a.35.35 0 0 1 0-.7h2.1a.349.349 0 0 1 .248.103Z"
+        fill-rule="evenodd" clip-rule="evenodd" />
+</svg>
