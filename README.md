@@ -1,42 +1,49 @@
-# Starlight Starter Kit: Basics
+# Bedrock Webstie
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+<figure style="margin-inline: block;">
+  <img src="https://bedrock.engineer/public/Bedrock_TextRight.png" alt="Bedrock logo" width="75%"/>
+</figure>
 
-```
-npm create astro@latest -- --template starlight
-```
+<h3 style="margin-inline: block;">Bedrock, the Open Source Foundation for Geotechnical Engineering</h3>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🌐 **Website:** <https://bedrock.engineer/>
 
-## 🚀 Project Structure
+📃 **Documentation:** <https://bedrock.engineer/getting-started>
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+📃 **API Reference:** <https://bedrock.engineer/reference/>
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+🖥️ **Source Code:** <https://github.com/bedrock-engineer/bedrock-ge>
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+🐍 **`bedrock-ge` on PyPI:** <https://pypi.org/project/bedrock-ge/>
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+🔗 **LinkedIn:** <https://www.linkedin.com/company/bedrock-engineer>
 
-Static assets, like favicons, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## Overview
+
+> **Definition of Bedrock**
+>
+> In an abstract sense, the bedrock refers to the main principles something is based on. [1]
+>
+> In the real world, the bedrock is the hard area of rock in the ground that holds up the loose soil above. [1]
+>
+> In many civil engineering projects, the identification of the bedrock through digging, drilling or geophysical methods is an important task, which greatly influences (geotechnical) design. [2]
+>
+> Sources: [[1] Bedrock | Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/bedrock), [[2] Bedrock | Wikipedia](https://en.wikipedia.org/wiki/Bedrock)
+
+Ground Investigation (GI) data is often trapped in legacy formats that limit analysis and visualization possibilities.
+`bedrock-ge` lets you transform this data from specialized geotechnical formats and common tabular formats (Excel, CSV) into modern, standardized geospatial data.
+
+This standardization lets you bridge the gap between raw geotechnical data, the modern Python (geo)scientific ecosystem and modern geospatial tools.
+This gives geotechnical engineers greater flexibility in visualization, modeling, and integration across different software environments while avoiding vendor lock-in.
+For example, this enables connecting your GI data with GIS as well as BIM environments through [platforms like Speckle](#-put-your-gi-data-into-speckle).
+
+The purpose of Bedrock is NOT to become THE standard for geotechnical data, because [we don't need 15 instead of 14 competing standards](https://xkcd.com/927/).
+
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -49,6 +56,40 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## API Reference Generation
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+The API reference documentation in `src/content/docs/reference/` is auto-generated from the bedrock-ge Python package using pydoc-markdown.
+
+### Prerequisites
+
+1. Ensure Python environment is set up:
+   ```bash
+   uv init --python 3.9  # Only needed once
+   uv add pydoc-markdown bedrock-ge  # Install dependencies
+   ```
+
+### Generating API Documentation
+
+To regenerate the API reference documentation:
+
+```bash
+uv run pydoc-markdown
+uv run python update_frontmatter.py
+```
+
+These commands:
+
+1. **Generate docs**: Reads the configuration from `pydoc-markdown.yml`, extracts docstrings from bedrock-ge, and creates markdown files in `src/content/docs/reference/`
+2. **Update frontmatter**: Adds `prev: false` and `next: false` to all generated files for better Starlight navigation
+
+**Note**: You may see warnings about deprecated `pkg_resources` and unknown configuration options - these are harmless and the generation will complete successfully.
+
+### Configuration
+
+The generation is controlled by `pydoc-markdown.yml`:
+
+- **Filters**: Excludes private members (starting with `_`), special members, and common imports
+- **Output**: Creates individual markdown files per module
+- **Format**: Generates Starlight-compatible frontmatter and structure
+
+The generated files automatically integrate with Starlight's navigation via the `autogenerate: { directory: "reference" }` setting in `astro.config.mjs`.

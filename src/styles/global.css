@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-optical-sizing: auto;
+}
+
+.landing-section {
+  padding-inline: 24px;
+  border-bottom: 1px solid var(--border-color);
+
+  h2 > a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+@theme {
+  --color-green-50: #eeffe6;
+  --color-green-100: #d0e6c7;
+  --color-green-200: #b3ccaa;
+  --color-green-300: #97b38f;
+  --color-green-400: #7c9975;
+  --color-green-500: #63805e;
+  --color-green-600: #4b6647;
+  --color-green-700: #354c33;
+  --color-green-800: #213320;
+  --color-green-900: #0f190f;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: none;
+
+  em {
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+h3,
+h4 {
+  font-weight: 500;
+}
+
+a {
+  transition: text-decoration 150ms, color 150ms;
+  border-radius: 2px;
+}
+
+a:hover {
+  color: var(--color-blue-800);
+}
+
+a:active {
+  color: var(--color-blue-900);
+}
+
+a[href^="http"] {
+  text-decoration: underline;
+  text-decoration-color: hsl(219, 79%, 72%);
+}
+
+.landing a[href^="http"]::after {
+  margin-left: 0.1ch;
+  display: contents;
+  white-space: nowrap;
+  vertical-align: baseline;
+  content: "\FEFF"url("external-link.svg");
+  background-size: cover;
+}
+
+a[href^="http"]:hover {
+  text-decoration-color: hsl(219, 79%, 56%);
+}

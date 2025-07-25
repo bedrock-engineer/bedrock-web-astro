@@ -5,13 +5,32 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run quarto:render && npm run docs:generate && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "quarto:render": "quarto render",
+    "docs:generate": "cd ../bedrock-ge && uv run python generate_docs.py"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.3",
+    "@astrojs/react": "^4.3.0",
     "@astrojs/starlight": "^0.34.7",
+    "@fontsource-variable/ibm-plex-sans": "^5.2.6",
+    "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@fontsource/ibm-plex-sans": "^5.2.6",
+    "@fontsource/ibm-plex-sans-condensed": "^5.2.6",
+    "@react-three/drei": "^10.6.0",
+    "@react-three/fiber": "^9.2.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "astro": "^5.6.1",
-    "sharp": "^0.34.2"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remark-definition-list": "^2.0.0",
+    "sharp": "^0.34.2",
+    "starlight-links-validator": "^0.17.0",
+    "tailwindcss": "^4.1.11",
+    "three": "^0.178.0"
   }
 }

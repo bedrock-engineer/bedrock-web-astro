@@ -1,0 +1,34 @@
+---
+import Button from "../Button.astro";
+import { Image } from "astro:assets";
+import BedrockLogo from "../../assets/bedrock.svg";
+
+import { GeologicalModel } from "../model/block-model.jsx";
+---
+
+<header class="landing-section">
+  <div class="p-2 flex justify-between items-center">
+    <Image src={BedrockLogo} width="30" alt="Bedrock logo" class="block" />
+    <code class="block font-mono text-sm">uv add bedrock-ge</code>
+    <!-- TODO add copy button -->
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 pb-4">
+    <div style="grid-column: 1/3;">
+      <h1 style="font-size: clamp(1.25rem, 0.954rem + 2.963vw, 3.25rem)">
+        Transform your ground investigation data from legacy databases and
+        formats into <em>structured 3D geospatial</em> data
+      </h1>
+
+      <p>From proprietary data silos to to open geospatial data in minutes.</p>
+
+      
+      <div class="flex space-between gap-x-2 my-6">
+        <Button href="/getting-started">Get started</Button>
+        <Button href="/examples">Examples</Button>
+        <Button href="/professional-support">Professional support</Button>
+      </div>
+    </div>
+    <GeologicalModel client:load  />
+  </div>
+</header>
