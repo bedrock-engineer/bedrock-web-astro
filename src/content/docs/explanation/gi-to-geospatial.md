@@ -195,7 +195,7 @@ Spatial queries and analysis</dt>
 
 Geospatial data achieves its spatial awareness through [Spatial Reference Systems](https://en.wikipedia.org/wiki/Spatial_reference_system) (SRS), standardized definitions that link coordinates to real locations on Earth.
 
-See the [Spatial Reference Systems](../concepts/spatial-reference-systems/) explanation for more.
+See the [Spatial Reference Systems](/explanation/concepts/spatial-reference-systems/) explanation for more.
 
 ## Breaking free from format silos
 
@@ -213,7 +213,7 @@ By recognizing geotechnical data as geospatial data, we can:
 
 When geospatial data is stored in databases rather than files, it becomes even more powerful. Geospatial databases like [PostGIS](https://postgis.net/) (PostgreSQL-based) or [GeoPackage](https://www.geopackage.org/) (SQLite-based) combine the benefits of:
 
-- **Relational structure**: Store hierarchical geotechnical data efficiently ([learn more about hierarchical data structures](/hierarchical-structure))
+- **Relational structure**: Store hierarchical geotechnical data efficiently. Learn more about [hierarchical data structures](/explanation/hierarchical-structure/).
 - **Spatial capabilities**: Perform geographic queries and analysis
 - **Multi-user access**: Server databases like PostGIS support concurrent users; GeoPackage is better for single-user or read-heavy scenarios
 - **Data integrity**: Enforce relationships and constraints

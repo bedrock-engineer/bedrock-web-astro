@@ -37,8 +37,8 @@ description: API reference overview
 
 ### Utilities & I/O
 
-- [`io_utils.py`](gi/sqlmodels/) - File handling with smart encoding detection and type coercion
-- [`write.py`](gi/write) - Export functions for GeoPackage, Excel, and other formats
-- [`db_operations.py`](gi/db_operations) - Database merging with merge_dbs() function
-- [`validate.py`](gi/validate) - Data validation utilities for referential integrity
+- `io_utils.py` - File handling with smart encoding detection and type coercion
+- `write.py` - Export functions for GeoPackage, Excel, and other formats
+- `db_operations.py` - Database merging with merge_dbs() function
+- `validate.py` - Data validation utilities for referential integrity
 

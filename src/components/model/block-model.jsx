@@ -8,14 +8,14 @@ const layers = [
     type: "limestone",
     baseThickness: 0.15,
     variation: { x: 0.05, z: 0.03 },
-    color: "#f0f0f0",
+    color: "hsl(106, 3%, 53%)",
     name: "Limestone/Chalk",
   },
   {
     type: "sand",
     baseThickness: 0.25,
     variation: { x: 0.08, z: 0.12 },
-    color: "#d0d0d0",
+    color: "hsl(34, 20%, 50%)",
     name: "Sand/Pleistocene deposits",
   },
   {
@@ -43,7 +43,7 @@ const layers = [
     type: "clay",
     baseThickness: 0.22,
     variation: { x: 0.09, z: 0.06 },
-    color: "#606060",
+    color: "hsl(111, 15%, 43%)",
     name: "Clay/Tertiary deposits",
   },
 ];

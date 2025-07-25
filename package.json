@@ -9,9 +9,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "quarto:render": "quarto render",
-    "docs:generate": "cd ../bedrock-ge && uv run python generate_docs.py"
+    "docs:generate": "cd ../bedrock-ge && uv run python generate_docs.py",
+    "deploy": "npx astro build && npx wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.0",
     "@astrojs/markdown-remark": "^6.3.3",
     "@astrojs/react": "^4.3.0",
     "@astrojs/starlight": "^0.34.7",
@@ -32,5 +34,8 @@
     "starlight-links-validator": "^0.17.0",
     "tailwindcss": "^4.1.11",
     "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.26.0"
   }
 }

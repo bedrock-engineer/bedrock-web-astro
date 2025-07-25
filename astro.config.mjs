@@ -7,6 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import remarkDefinitionList from "remark-definition-list";
 import starlightLinksValidator from "starlight-links-validator";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -86,11 +87,15 @@ export default defineConfig({
     }),
     react({ experimentalReactChildren: true }),
   ],
+
   markdown: {
     rehypePlugins: [rehypeHeadingIds],
     remarkPlugins: [remarkDefinitionList],
   },
+
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare(),
 });
