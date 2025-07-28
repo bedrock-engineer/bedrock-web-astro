@@ -28,7 +28,16 @@ body {
   --color-green-700: #354c33;
   --color-green-800: #213320;
   --color-green-900: #0f190f;
+
+  --color-brand-green: hsl(111deg 15% 44%);
+  --color-brand-brown: hsl(34deg 19% 50%);
+  --color-brand-green: hsl(110deg 3% 53%);
 }
+
+::selection {
+  background-color: var(--color-green-200);
+}
+
 
 h1,
 h2,
@@ -51,32 +60,19 @@ h4 {
 }
 
 a {
-  transition: text-decoration 150ms, color 150ms;
+  transition: text-decoration 100ms, color 150ms;
   border-radius: 2px;
 }
 
 a:hover {
-  color: var(--color-blue-800);
+  color: oklch(57.106% 0.06103 140.969);
 }
 
 a:active {
-  color: var(--color-blue-900);
+  color: var(--color-green-700);
 }
 
-a[href^="http"] {
+.link[href^="http"] {
   text-decoration: underline;
-  text-decoration-color: hsl(219, 79%, 72%);
-}
-
-.landing a[href^="http"]::after {
-  margin-left: 0.1ch;
-  display: contents;
-  white-space: nowrap;
-  vertical-align: baseline;
-  content: "\FEFF"url("external-link.svg");
-  background-size: cover;
-}
-
-a[href^="http"]:hover {
-  text-decoration-color: hsl(219, 79%, 56%);
+  text-decoration-color: var(--color-brand-green);
 }

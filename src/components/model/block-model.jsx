@@ -22,21 +22,21 @@ const layers = [
     type: "limestone",
     baseThickness: 0.2,
     variation: { x: 0.06, z: 0.04 },
-    color: "#e8e8e8",
+    color: "#806c4f",
     name: "Limestone/Marl",
   },
   {
     type: "shale",
     baseThickness: 0.2,
     variation: { x: 0.04, z: 0.08 },
-    color: "#808080",
+    color: "#97b38f",
     name: "Clay/Shale",
   },
   {
     type: "silt",
     baseThickness: 0.18,
     variation: { x: 0.07, z: 0.05 },
-    color: "#b0b0b0",
+    color: "#4b6647",
     name: "Silt/Loam",
   },
   {
@@ -295,11 +295,10 @@ function GeologicalBlock() {
 export function GeologicalModel({ width = 400, height = 400 }) {
   return (
     <div
+      className="mx-auto"
       style={{
         width: width,
         height: height,
-        position: "relative",
-        gridColumn: 3,
       }}
     >
       <Canvas
@@ -307,10 +306,10 @@ export function GeologicalModel({ width = 400, height = 400 }) {
         camera={{ position: [1.8, 1.8, 1.8], fov: 75 }}
         style={{ background: "#ffffff", width: "100%", height: "100%" }}
       >
-        <ambientLight intensity={0.6} />
+        <ambientLight intensity={0.8} />
         <directionalLight
-          position={[5, 5, 5]}
-          intensity={0.8}
+          position={[1, 1, 1]}
+          intensity={1}
           castShadow
           shadow-mapSize-width={2048}
           shadow-mapSize-height={2048}

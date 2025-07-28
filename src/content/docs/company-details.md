@@ -3,13 +3,14 @@ title: Company Details
 description: Bedrock company details
 ---
 
+<!-- TODO -->
 <!-- Like https://dashboard.simpleanalytics.com/contact#details  with copy buttons -->
+
 Our company details for your accountant.
 
-TODO
-
-Company name Bedrock B.V.
-Address:
-VAT ID: 
-KvK nummer:
-
+<dl>
+<dt>Company name</dt> <dd>Bedrock B.V.</dd>
+<dt>Address:</dt>
+<dt>VAT ID:</dt>
+<dt>KvK nummer:</dt>
+</dk>

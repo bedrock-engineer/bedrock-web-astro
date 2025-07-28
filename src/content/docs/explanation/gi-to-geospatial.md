@@ -199,7 +199,7 @@ See the [Spatial Reference Systems](/explanation/concepts/spatial-reference-syst
 
 ## Breaking free from format silos
 
-Traditional geotechnical data formats (AGS, DIGGS, GEF) are good at data exchange but create silos that limit interoperability. 
+Traditional geotechnical data formats (AGS, DIGGS, GEF) are good at data exchange but create data silos that limit interoperability. 
 The purpose of Bedrock is NOT to become THE standard for GI data, because we don’t need [15 instead of 14 competing standards](https://xkcd.com/927/).
 By recognizing geotechnical data as geospatial data, we can:
 
@@ -211,7 +211,10 @@ By recognizing geotechnical data as geospatial data, we can:
 
 ## Geospatial databases
 
-When geospatial data is stored in databases rather than files, it becomes even more powerful. Geospatial databases like [PostGIS](https://postgis.net/) (PostgreSQL-based) or [GeoPackage](https://www.geopackage.org/) (SQLite-based) combine the benefits of:
+Geospatial databases are specialized databases that can store and work with geospatial data.
+Unlike regular databases that only handle text and numbers, these databases understand spatial relationships. By storing geospatial data in databases rather than files, you gain powerful querying capabilities and can efficiently manage large, complex 3D spatial datasets.
+
+Geospatial databases like [PostGIS](https://postgis.net/) (PostgreSQL-based) or [GeoPackage](https://www.geopackage.org/) (SQLite-based) combine the benefits of:
 
 - **Relational structure**: Store hierarchical geotechnical data efficiently. Learn more about [hierarchical data structures](/explanation/hierarchical-structure/).
 - **Spatial capabilities**: Perform geographic queries and analysis

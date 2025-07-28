@@ -1,4 +1,7 @@
 ---
+import { Icon } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+import structureDiagram from "../assets/structure.svg";
 import Header from "../components/landing/Header.astro";
 import OneThirdColumn from "../components/landing/one-third-column.astro";
 import Panel from "../components/landing/Panel.astro";
@@ -6,8 +9,6 @@ import Ribbon from "../components/landing/ribbon.astro";
 import ThreeColumns from "../components/landing/three-columns.astro";
 import TwoColumns from "../components/landing/TwoColumns.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
-import structureDiagram from "../assets/structure.svg";
 import "../styles/global.css";
 ---
 
@@ -55,7 +56,10 @@ import "../styles/global.css";
 
         <OneThirdColumn title="What is Bedrock?">
           <p>
-            <a href="https://github.com/bedrock-engineer/bedrock-ge">
+            <a
+              class="link"
+              href="https://github.com/bedrock-engineer/bedrock-ge"
+            >
               Bedrock-ge
             </a>{" "}
             is an open-source Python library that converts your ground investigation
@@ -96,7 +100,7 @@ import "../styles/global.css";
           <p>
             Connect your GI data with the Python (geo)scientific ecosystem, GIS
             tools, and BIM platforms like{" "}
-            <a href="https://speckle.systems/">Speckle</a>.
+            <a class="link" href="https://speckle.systems/">Speckle</a>.
           </p>
         </Panel>
       </TwoColumns>
@@ -133,8 +137,11 @@ import "../styles/global.css";
           href="explanation/concepts/open-source/"
         >
           <p>
-            bedrock-ge is licensed under the{" "}
-            <a href="https://www.apache.org/licenses/LICENSE-2.0.html">
+            Bedrock-ge is licensed under the{" "}
+            <a
+              class="link"
+              href="https://www.apache.org/licenses/LICENSE-2.0.html"
+            >
               Apache License 2.0
             </a>
             , making it free to use, modify, and distribute.
@@ -147,6 +154,7 @@ import "../styles/global.css";
               or difficult to access as software ecosystems evolve. Already,
               reading older AGS or GEF files can be difficult. By converting to
               widely-adopted open geospatial standards like <a
+                class="link"
                 href="http://geopackage.org/">GeoPackage</a
               >, your data gains long-term accessibility across the entire
               geospatial software ecosystem, not just specialized geotechnical
@@ -168,6 +176,7 @@ import "../styles/global.css";
             <p>
               Missing a feature?{" "}
               <a
+                class="link"
                 href="https://github.com/bedrock-engineer/bedrock-ge/issues/new"
               >
                 Open an issue
@@ -189,7 +198,7 @@ import "../styles/global.css";
         >
           <p>
             While bedrock-ge is an Free & Open Source Software project, you
-            might be looking for <a href="/professional-support"
+            might be looking for <a class="link" href="/professional-support"
               >professional support</a
             > implementing it.{" "}
           </p>
@@ -211,6 +220,40 @@ import "../styles/global.css";
           </p>
         </Panel>
       </TwoColumns>
+      <footer
+        class="bg-black text-gray-300 px-10 py-12 text-sm"
+        style="background-image: url('granite.svg'); background-size: 250px;"
+      >
+        <div class="flex justify-between">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/company/bedrock-engineer/">
+                <Icon class="inline mr-1" name="linkedin" />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/bedrock-engineer/">
+                <Icon class="inline mr-1" name="github" />
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@bedrock.engineer">
+                <Icon class="inline mr-1" name="email" />
+                info@bedrock.engineer
+              </a>
+            </li>
+            <li>
+              <a href="company-details">
+                <Icon class="inline mr-1" name="document" />
+                Company details
+              </a>
+            </li>
+          </ul>
+          <p class="self-end">© {new Date().getFullYear()} Bedrock B.V.</p>
+        </div>
+      </footer>
     </Ribbon>
   </div>
 
@@ -219,12 +262,20 @@ import "../styles/global.css";
       --border-color: hsl(34, 27%, 74%);
       background-color: white;
       color: black;
-      margin-block: 16px;
     }
 
     .landing-section {
       padding-inline: 24px;
       border-bottom: 1px solid var(--border-color);
+    }
+
+    a[href^="http"]::after {
+      margin-left: 0.1ch;
+      display: contents;
+      white-space: nowrap;
+      vertical-align: baseline;
+      content: "\FEFF" url("external-link.svg");
+      background-size: cover;
     }
   </style>
 </BaseLayout>
