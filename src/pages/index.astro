@@ -129,6 +129,7 @@ import "../styles/global.css";
             hierarchy of investigations: projects contain boreholes, boreholes
             contain samples, samples have test results.
           </p>
+
           <p>
             Legacy systems and formats often break these relationships or fail
             to enforce them properly. Bedrock ensures proper data structure, and
@@ -139,7 +140,7 @@ import "../styles/global.css";
           <Image
             src={structureDiagram}
             width="220"
-            class="block"
+            class="block mb-4"
             alt="Indented tree diagram of the strucuture of a geotechnical investigation"
           />
         </div>
@@ -221,6 +222,7 @@ import "../styles/global.css";
             Bedrock provides support and consultancy services for the bedrock-ge
             library, directly by its creators. We can help you with:
           </p>
+
           <ul class="list-disc list-inside">
             <li>Converting your GI data to open geospatial standards</li>
             <li>Visualizing GI data in 3D</li>
@@ -242,6 +244,7 @@ import "../styles/global.css";
         <div class="flex justify-between">
           <div>
             <h3 class="text-lg bg-black w-fit">Bedrock</h3>
+
             <ul>
               <li>
                 <a class="bg-black" href="https://www.linkedin.com/company/bedrock-engineer/">
@@ -269,6 +272,7 @@ import "../styles/global.css";
               </li>
             </ul>
           </div>
+
           <p class="self-end bg-black">© {new Date().getFullYear()} Bedrock B.V.</p>
         </div>
       </footer>
@@ -287,12 +291,12 @@ import "../styles/global.css";
       border-bottom: 1px solid var(--border-color);
     }
 
-    a[href^="http"]::after {
+    .link[href^="http"]::after {
       margin-left: 0.1ch;
       display: contents;
       white-space: nowrap;
       vertical-align: baseline;
-      content: "\FEFF" url("external-link.svg");
+      content: "\FEFF" url("/icons/external-link.svg");
       background-size: cover;
     }
   </style>

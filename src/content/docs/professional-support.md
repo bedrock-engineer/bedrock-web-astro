@@ -8,6 +8,7 @@ While bedrock-ge is an Free & Open Source Software project, you might be looking
 Bedrock provides support and consultancy services for the bedrock-ge library, directly by its creators.
 
 We can help you with
+
 * Converting your GI data to open geospatial standards
 * Automating ground modelling workflows
 * Integrating GI data in to digital twins

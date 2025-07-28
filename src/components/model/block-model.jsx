@@ -292,7 +292,7 @@ function GeologicalBlock() {
   );
 }
 
-export function GeologicalModel({ width = 400, height = 400 }) {
+export function GeologicalModel({ width = 380, height = 380 }) {
   return (
     <div
       className="mx-auto"
@@ -304,7 +304,7 @@ export function GeologicalModel({ width = 400, height = 400 }) {
       <Canvas
         shadows
         camera={{ position: [1.8, 1.8, 1.8], fov: 75 }}
-        style={{ background: "#ffffff", width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%" }}
       >
         <ambientLight intensity={0.8} />
         <directionalLight
@@ -315,7 +315,7 @@ export function GeologicalModel({ width = 400, height = 400 }) {
           shadow-mapSize-height={2048}
         />
 
-        <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+        <OrbitControls enablePan={true} enableZoom={false} enableRotate={true} />
 
         <GeologicalBlock />
       </Canvas>
