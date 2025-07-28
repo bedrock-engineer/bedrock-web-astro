@@ -216,7 +216,7 @@ Unlike regular databases that only handle text and numbers, these databases unde
 
 Geospatial databases like [PostGIS](https://postgis.net/) (PostgreSQL-based) or [GeoPackage](https://www.geopackage.org/) (SQLite-based) combine the benefits of:
 
-- **Relational structure**: Store hierarchical geotechnical data efficiently. Learn more about [hierarchical data structures](/explanation/hierarchical-structure/).
+- **Relational structure**: Store [hierarchical geotechnical data](/explanation/hierarchical-structure/) efficiently.
 - **Spatial capabilities**: Perform geographic queries and analysis
 - **Multi-user access**: Server databases like PostGIS support concurrent users; GeoPackage is better for single-user or read-heavy scenarios
 - **Data integrity**: Enforce relationships and constraints

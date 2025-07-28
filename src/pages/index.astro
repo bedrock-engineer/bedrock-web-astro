@@ -2,6 +2,8 @@
 import { Icon } from "@astrojs/starlight/components";
 import { Image } from "astro:assets";
 import structureDiagram from "../assets/structure.svg";
+import kaiTakSpeckle from "../assets/KaiTak_BrGI_Speckle.png";
+import arcGIS from "../assets/KaiTak_BrGI_ArcGIS.webp";
 import Header from "../components/landing/Header.astro";
 import OneThirdColumn from "../components/landing/one-third-column.astro";
 import Panel from "../components/landing/Panel.astro";
@@ -86,6 +88,12 @@ import "../styles/global.css";
             specialized GI data formats and the wider world of geospatial tools
             and standards.
           </p>
+          <!-- <Image
+            src={arcGIS}
+            width={300}
+            alt="Screen recording of 3D GI data in ArcGIS with 3D buildings"
+            class="float-right mr-1"
+          /> -->
         </Panel>
 
         <Panel
@@ -102,6 +110,12 @@ import "../styles/global.css";
             tools, and BIM platforms like{" "}
             <a class="link" href="https://speckle.systems/">Speckle</a>.
           </p>
+          <!-- <Image
+            src={kaiTakSpeckle}
+            width={300}
+            alt="Screenshot of GI data in Speckle with 3D buildings"
+            class="float-right"
+          /> -->
         </Panel>
       </TwoColumns>
 
@@ -220,38 +234,42 @@ import "../styles/global.css";
           </p>
         </Panel>
       </TwoColumns>
+
       <footer
-        class="bg-black text-gray-300 px-10 py-12 text-sm"
+        class="bg-black text-gray-300 px-10 py-6 text-sm"
         style="background-image: url('granite.svg'); background-size: 250px;"
       >
         <div class="flex justify-between">
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/company/bedrock-engineer/">
-                <Icon class="inline mr-1" name="linkedin" />
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/bedrock-engineer/">
-                <Icon class="inline mr-1" name="github" />
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="mailto:info@bedrock.engineer">
-                <Icon class="inline mr-1" name="email" />
-                info@bedrock.engineer
-              </a>
-            </li>
-            <li>
-              <a href="company-details">
-                <Icon class="inline mr-1" name="document" />
-                Company details
-              </a>
-            </li>
-          </ul>
-          <p class="self-end">© {new Date().getFullYear()} Bedrock B.V.</p>
+          <div>
+            <h3 class="text-lg bg-black w-fit">Bedrock</h3>
+            <ul>
+              <li>
+                <a class="bg-black" href="https://www.linkedin.com/company/bedrock-engineer/">
+                  <Icon class="inline mr-1" name="linkedin" />
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a class="bg-black" href="https://github.com/bedrock-engineer/">
+                  <Icon class="inline mr-1" name="github" />
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a class="bg-black" href="mailto:info@bedrock.engineer">
+                  <Icon class="inline mr-1" name="email" />
+                  info@bedrock.engineer
+                </a>
+              </li>
+              <li>
+                <a class="bg-black" href="company-details">
+                  <Icon class="inline mr-1" name="document" />
+                  Company details
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="self-end bg-black">© {new Date().getFullYear()} Bedrock B.V.</p>
         </div>
       </footer>
     </Ribbon>
