@@ -18,7 +18,7 @@ Each **sample** (SAMP) belongs to a **location** (LOCA). Each **location** belon
 
 Here’s a visual of the hierarchy of groups commonly found in an AGS4 file. 
 
-<svg xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font:13px sans-serif" viewBox="-12 -24 402 424"><g fill="none" stroke="#999"><path d="M0 0v24h24"/><path d="M0 0v264h24"/><path d="M0 0v288h24"/><path d="M0 0v312h24"/><path d="M0 0v336h24M24 24v24h24"/><path d="M24 24v120h24"/><path d="M24 24v168h24"/><path d="M24 24v192h24"/><path d="M24 24v216h24M48 48v24h24"/><path d="M48 48v72h24M48 144v24h24M72 72v24h24"/></g><g><circle r="2.5"/><text x="6" dy=".32em">
+<svg xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font:13px sans-serif; max-width: 450px;"  viewBox="-12 -24 402 424"><g fill="none" stroke="#999"><path d="M0 0v24h24"/><path d="M0 0v264h24"/><path d="M0 0v288h24"/><path d="M0 0v312h24"/><path d="M0 0v336h24M24 24v24h24"/><path d="M24 24v120h24"/><path d="M24 24v168h24"/><path d="M24 24v192h24"/><path d="M24 24v216h24M48 48v24h24"/><path d="M48 48v72h24M48 144v24h24M72 72v24h24"/></g><g><circle r="2.5"/><text x="6" dy=".32em">
   <tspan font-weight="600">PROJ</tspan>
   <tspan dx="2">Project information</tspan>
 </text></g><g transform="translate(0 24)"><circle cx="24" r="2.5"/><text x="30" dy=".32em">
