@@ -1,4 +1,6 @@
 ---
+import Button from "../Button.astro";
+
 export interface Props {
   title?: string;
   href?: string;
@@ -8,14 +10,9 @@ const { title, href } = Astro.props;
 ---
 
 <div class="space-y-2 py-6">
-  {
-    title && href ? (
-      <h2 class="mb-2 text-3xl">
-        <a href={href} set:html={title} />
-      </h2>
-    ) : (
-      <h2 class="mb-2 text-3xl" set:html={title} />
-    )
-  }
+  {title && <h2 class="mb-2 text-3xl" set:html={title} />}
   <slot />
+  <div class="ml-auto w-fit mr-2">
+    <Button href={href}>Learn more</Button>
+  </div>
 </div>

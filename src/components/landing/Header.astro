@@ -6,15 +6,18 @@ import { GeologicalModel } from "../model/block-model.jsx";
 ---
 
 <header class="landing-section">
-  <div class="p-2 flex justify-between items-center">
-    <Image src={BedrockLogo} width="30" alt="Bedrock logo" class="block" />
-    <code class="block font-mono text-sm">uv add bedrock-ge</code>
+  <div class="py-2 flex justify-end items-center">
+    <code class="block font-mono text-sm text-right">uv add bedrock-ge</code>
     <!-- TODO add copy button -->
   </div>
 
-  <div class="flex flex-wrap sm:flex-nowrap pb-4">
-    <div class="flex-1/2">
-      <h1 style="font-size: clamp(1.25rem, 0.954rem + 2.963vw, 3.25rem)">
+  <div class="flex flex-wrap sm:flex-nowrap pb-4 my-auto">
+    <div>
+      <h2 class="text-3xl md:text-4xl flex gap-2">
+        <Image src={BedrockLogo} width="30" alt="Bedrock logo" class="block" />
+        Bedrock
+      </h2>
+      <h1>
         Transform your ground investigation data from legacy databases and
         formats into <em>structured 3D geospatial</em> data
       </h1>
@@ -34,3 +37,17 @@ import { GeologicalModel } from "../model/block-model.jsx";
     <GeologicalModel client:load />
   </div>
 </header>
+
+<style>
+  header {
+    display: grid;
+    height: clamp(400px, 100svh - 238px, 800px);
+    grid-template-rows: min-content 1fr;
+    background-image: url("607.svg");
+    background-size: 80px;
+  }
+
+  h1 {
+    font-size: clamp(1.25rem, 0.954rem + 2.963vw, 3.25rem);
+  }
+</style>

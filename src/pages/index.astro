@@ -48,11 +48,11 @@ import "../styles/global.css";
 
         <OneThirdColumn title="What is the problem?">
           <p>
-            Yet this critical data is trapped in proprietary, systems like gINT,
-            or in outdated file formats like AGS and GEF. As a result,
-            geotechnical projects suffer from inefficient workflows, vendor
-            lock-in, and inability to use modern analysis tools that could
-            improve decision-making.
+            Yet this critical data is trapped in proprietary, database systems
+            like gINT, or in outdated file formats like AGS and GEF. As a
+            result, geotechnical projects suffer from inefficient workflows,
+            vendor lock-in, and inability to use modern analysis tools that
+            could improve decision-making.
           </p>
         </OneThirdColumn>
 
@@ -62,14 +62,15 @@ import "../styles/global.css";
               class="link"
               href="https://github.com/bedrock-engineer/bedrock-ge"
             >
-              Bedrock-ge
+              <code>bedrock-ge</code>
             </a>{" "}
             is an open-source Python library that converts your ground investigation
             data from various formats, making it accessible to GIS, databases, and
             modern analysis tools.
           </p>
+
           <p>
-            Bedrock is the company that develops bedrock-ge and provides
+            Bedrock is the company that develops <code>bedrock-ge</code> and provides
             consulting services.
           </p>
         </OneThirdColumn>
@@ -88,12 +89,21 @@ import "../styles/global.css";
             specialized GI data formats and the wider world of geospatial tools
             and standards.
           </p>
-          <!-- <Image
-            src={arcGIS}
-            width={300}
-            alt="Screen recording of 3D GI data in ArcGIS with 3D buildings"
-            class="float-right mr-1"
-          /> -->
+
+          <figure>
+            <Image
+              src={arcGIS}
+              alt="Screen recording of 3D GI data in ArcGIS with 3D buildings"
+              class="mr-1 border border-gray-300 rounded-xs"
+              height={300}
+            />
+            <figcaption>
+              GI data in Kai Tak, Hong Kong.
+              <a class="link" href="https://arcg.is/0r9DG9"
+                >Click here to explore for yourself.</a
+              >
+            </figcaption>
+          </figure>
         </Panel>
 
         <Panel
@@ -105,17 +115,30 @@ import "../styles/global.css";
             feedback between them. Geospatial GI data lets you view geotechnical
             data alongside structural or building models in spatial context.
           </p>
+
           <p>
             Connect your GI data with the Python (geo)scientific ecosystem, GIS
             tools, and BIM platforms like{" "}
             <a class="link" href="https://speckle.systems/">Speckle</a>.
           </p>
-          <!-- <Image
-            src={kaiTakSpeckle}
-            width={300}
-            alt="Screenshot of GI data in Speckle with 3D buildings"
-            class="float-right"
-          /> -->
+          <figure>
+            <Image
+              src={kaiTakSpeckle}
+              alt="Screenshot of GI data in Speckle with 3D buildings"
+              class="border border-gray-300 rounded-xs"
+              height={300}
+            />
+            <figcaption>
+              Models from Rhino, Revit, Civil3D + context & GI data from
+              Q/ArcGIS.
+              <a
+                class="link"
+                href="https://app.speckle.systems/projects/013aaf06e7/models/0fa0287ba8,1cbe68ed69,44c8d1ecae,7f9d99cae2,9535541c2b,a739490298,ff81bfa02b"
+              >
+                Click here to explore for yourself.
+              </a>
+            </figcaption>
+          </figure>
         </Panel>
       </TwoColumns>
 
@@ -141,7 +164,7 @@ import "../styles/global.css";
             src={structureDiagram}
             width="220"
             class="block mb-4"
-            alt="Indented tree diagram of the strucuture of a geotechnical investigation"
+            alt="Indented tree diagram of the structure of a geotechnical investigation"
           />
         </div>
       </TwoColumns>
@@ -152,7 +175,7 @@ import "../styles/global.css";
           href="explanation/concepts/open-source/"
         >
           <p>
-            Bedrock-ge is licensed under the{" "}
+            <code>bedrock-ge</code> is licensed under the{" "}
             <a
               class="link"
               href="https://www.apache.org/licenses/LICENSE-2.0.html"
@@ -212,14 +235,16 @@ import "../styles/global.css";
           href="professional-support"
         >
           <p>
-            While bedrock-ge is an Free & Open Source Software project, you
-            might be looking for <a class="link" href="/professional-support"
-              >professional support</a
+            While <code>bedrock-ge</code> is a Free & Open Source Software project,
+            you might be looking for <a
+              class="link"
+              href="/professional-support">professional support</a
             > implementing it.{" "}
           </p>
 
           <p>
-            Bedrock provides support and consultancy services for the bedrock-ge
+            Bedrock provides support and consultancy services for the
+            <code>bedrock-ge</code>
             library, directly by its creators. We can help you with:
           </p>
 
@@ -247,7 +272,10 @@ import "../styles/global.css";
 
             <ul>
               <li>
-                <a class="bg-black" href="https://www.linkedin.com/company/bedrock-engineer/">
+                <a
+                  class="bg-black"
+                  href="https://www.linkedin.com/company/bedrock-engineer/"
+                >
                   <Icon class="inline mr-1" name="linkedin" />
                   LinkedIn
                 </a>
@@ -273,15 +301,19 @@ import "../styles/global.css";
             </ul>
           </div>
 
-          <p class="self-end bg-black">© {new Date().getFullYear()} Bedrock B.V.</p>
+          <p class="self-end bg-black">
+            © {new Date().getFullYear()} Bedrock B.V.
+          </p>
         </div>
       </footer>
     </Ribbon>
   </div>
 
   <style>
+    @reference "../styles/global.css";
+
     .landing {
-      --border-color: hsl(34, 27%, 74%);
+      --border-color: var(--color-green-100);
       background-color: white;
       color: black;
     }
@@ -298,6 +330,14 @@ import "../styles/global.css";
       vertical-align: baseline;
       content: "\FEFF" url("/icons/external-link.svg");
       background-size: cover;
+    }
+
+    figure {
+      margin-block-start: var(--spacing);
+    }
+
+    figcaption {
+      @apply text-sm italic my-1;
     }
   </style>
 </BaseLayout>

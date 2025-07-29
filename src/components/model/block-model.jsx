@@ -315,7 +315,7 @@ export function GeologicalModel({ width = 380, height = 380 }) {
           shadow-mapSize-height={2048}
         />
 
-        <OrbitControls enablePan={true} enableZoom={false} enableRotate={true} />
+        <OrbitControls enablePan={false} enableZoom={false} enableRotate={true} />
 
         <GeologicalBlock />
       </Canvas>

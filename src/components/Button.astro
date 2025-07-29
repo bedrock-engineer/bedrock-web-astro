@@ -7,11 +7,11 @@ const { href, ...props } = Astro.props;
 ---
 
 {href ? (
-  <a href={href} class="px-2 py-1 rounded-[1px] border-black border block hover:bg-green-50 hover:border-green-600 transition-colors" {...props}>
+  <a href={href} class="px-2 py-1 w-fit bg-white rounded-[1px] border-black border block hover:bg-green-50 hover:border-green-600 transition-colors" {...props}>
     <slot />
   </a>
 ) : (
-  <button class="px-2 py-1 rounded-[1px] border-black border block hover:bg-gray-100 transition-colors" {...props}>
+  <button class="px-2 py-1 rounded-[1px] border-black border block hover:bg-gray-100 transition-colors w-fit" {...props}>
     <slot />
   </button>
 )}
