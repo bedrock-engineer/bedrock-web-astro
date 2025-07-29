@@ -13,6 +13,6 @@ const { title, href } = Astro.props;
   {title && <h2 class="mb-2 text-3xl" set:html={title} />}
   <slot />
   <div class="ml-auto w-fit mr-2">
-    <Button href={href}>Learn more</Button>
+    <Button href={href}>Read more</Button>
   </div>
 </div>
