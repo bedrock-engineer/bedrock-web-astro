@@ -292,7 +292,7 @@ function GeologicalBlock() {
   );
 }
 
-export function GeologicalModel({ width = 380, height = 380 }) {
+export function GeologicalModel({ width = 350, height = 350 }) {
   return (
     <div
       className="mx-auto"
