@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run quarto:render && npm run docs:generate && astro build",
+    "build": "astro build",
+    "build:all": "npm run quarto:render && npm run docs:generate && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "quarto:render": "quarto render",
