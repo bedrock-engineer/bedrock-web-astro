@@ -1,9 +1,7 @@
 ---
-title: "Gallery"
-description: "Gallery of examples of bedrock-ge"
+title: "GI Data in Hong Kong"
+description: "Example of a Speckle and ArcGIS online viewer of 3D GI data."
 ---
-
-## Hong Kong
 
 <figure style="margin-inline: block; display: block;">
 
@@ -15,12 +13,21 @@ Models from Rhino, Revit, Civil3D + context & GI data from Q/ArcGIS. <a href="ht
 </figure>
 
 
+<figure style="margin-inline: block; display: block;">
+
+![Kai Tak, Hong Kong, 3D GI data visualization in ArcGIS](../../../assets/KaiTak_BrGI_ArcGIS.webp)
+
+<figcaption>
+
+Kai Tak, Hong Kong 3D GI data visualization in ArcGIS. <a href="https://arcg.is/0r9DG9">Click here to explore for yourself.</a>
+
+</figcaption>
+</figure>
+
 [View the marimo notebook in your browser](https://marimo.app/https://github.com/bedrock-engineer/bedrock-ge/blob/main/examples%2Fhk_kaitak_ags3%2Fhk_kaitak_ags3_to_brgi_geodb.py).
 
 ### Speckle
 
-Here is an embed of the [Speckle](https://speckle.systems) scene with GI data alongside buildings and a BIM model.
+Here is an interactive embed of the [Speckle](https://speckle.systems) scene with GI data alongside buildings and a BIM model.
 
 <iframe title="Kai Tak - Speckle" src="https://app.speckle.systems/projects/013aaf06e7/models/0fa0287ba8,a739490298,c59c767566#embed=%7B%22isEnabled%22%3Atrue%7D" width="100%" style="height:600px;" frameborder="0"></iframe>
-
-<!-- GEF A2 Maastricht -->
