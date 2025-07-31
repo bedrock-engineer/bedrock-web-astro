@@ -1,10 +1,10 @@
 [project]
-name = "bedrock-astro"
+name = "bedrock-web"
 version = "0.1.0"
-description = "Add your description here"
+description = "Bedrock's website & docs site"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 dependencies = [
-    "bedrock-ge>=0.2.4",
+    "bedrock-ge>=0.3.2",
     "pydoc-markdown>=4.8.2",
 ]
